@@ -1,4 +1,4 @@
 <form #searchForm="ngForm" class="form-inline my-2 my-lg-0"  (ngSubmit)="searchMovie()">
-  <input [(ngModel)]="searchName" minlength="3" required #search="ngModel" type="text" name="searchName" class="form-control">
+  <input [(ngModel)]="searchName" minlength="3" required #search="ngModel" type="text" name="searchName" class="form-control mr-sm-2">
   <button class="btn btn-secondary my-2 my-sm-0" type="submit" [disabled]="!searchForm.valid">Search</button>
 </form>

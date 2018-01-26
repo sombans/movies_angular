@@ -10,13 +10,15 @@ import { MovieRowComponent } from './components/movie-row/movie-row.component';
 import { SearchModule } from './SharedModule/module/search/search.module';
 import { SharedModule } from "./SharedModule/module/shared/shared.module";
 import { FormsModule } from '@angular/forms';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 
 const appRoutes: Routes = [
   
   { path: 'movies', component: MoviesComponent },
   { path: '', component: MoviesComponent },
+  { path: 'search/:term', component: SearchPageComponent },
 ]
- 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     SearchModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+  ],
+
+  exports: [
+    RouterModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
