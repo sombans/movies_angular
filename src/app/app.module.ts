@@ -7,6 +7,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieService } from './SharedModule/services/movie.service';
 import { MovieRowComponent } from './components/movie-row/movie-row.component';
+import { SearchModule } from './SharedModule/module/search/search.module';
+import { SharedModule } from "./SharedModule/module/shared/shared.module";
 
 
 const appRoutes: Routes = [
@@ -20,11 +22,13 @@ const appRoutes: Routes = [
     AppComponent,
     LayoutComponent,
     MoviesComponent,
-    MovieRowComponent
+    MovieRowComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    SearchModule,
+    SharedModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
