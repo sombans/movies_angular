@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieService } from './SharedModule/services/movie.service';
+import { MovieRowComponent } from './components/movie-row/movie-row.component';
 
 
 const appRoutes: Routes = [
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LayoutComponent,
-    MoviesComponent
+    MoviesComponent,
+    MovieRowComponent
   ],
   imports: [
     BrowserModule,
